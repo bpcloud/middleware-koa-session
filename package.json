@@ -1,0 +1,39 @@
+{
+  "description": "koa session middleware of bpframework",
+  "dependencies": {
+    "koa-session": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/koa-session": "^6.4.5"
+  },
+  "directories": {},
+  "engines": {
+    "node": ">=10"
+  },
+  "homepage": "https://github.com/bpcloud/middleware-koa-session#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bpcloud/middleware-koa-session.git"
+  },
+  "keywords": [
+    "bpframework",
+    "koa",
+    "session"
+  ],
+  "files": [
+    "libs",
+    "types",
+    "index.js"
+  ],
+  "types": "types/index.d.ts",
+  "license": "MIT",
+  "main": "./index.js",
+  "maintainers": [
+    {
+      "name": "brainpoint",
+      "email": "bpoint.lee@gmail.com"
+    }
+  ],
+  "name": "@bpframework/middleware-koa-session",
+  "version": "0.0.1"
+}
