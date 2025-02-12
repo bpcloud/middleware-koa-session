@@ -20,6 +20,9 @@ module.exports = async function (app, bpApp, request) {
         this._ctx.session = null
       }
     },
+    destroy() {
+      this._ctx.session = null
+    },
     enumerable: true, // 可枚举
     configurable: true, // 可配置
   })

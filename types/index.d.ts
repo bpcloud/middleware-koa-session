@@ -31,6 +31,11 @@ export interface Session {
   maxAge: number;
 
   /**
+   * destroy the session
+   */
+  destroy(): void;
+
+  /**
    * commit this session's headers if autoCommit is set to false.
    */
   manuallyCommit(): Promise<void>;

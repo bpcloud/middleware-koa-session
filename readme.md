@@ -60,7 +60,7 @@ async test(
   console.log(restObj.request.session.a);
 
   // destroy session.
-  restObj.request.session = null;
+  restObj.request.session.destroy();
 
   ...
 }
