@@ -11,6 +11,10 @@ module.exports = async function (app, bpApp, request) {
   request._session = app.session;
   request._ctx = app;
 
+  request._session.destroy = function () {
+    request._ctx.session = null
+  }
+
   Object.defineProperty(request, 'session', {
     get: function () {
       return this._session
@@ -19,9 +23,6 @@ module.exports = async function (app, bpApp, request) {
       if (value == null) {
         this._ctx.session = null
       }
-    },
-    destroy() {
-      this._ctx.session = null
     },
     enumerable: true, // 可枚举
     configurable: true, // 可配置

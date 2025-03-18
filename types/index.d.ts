@@ -69,8 +69,13 @@ interface Cfg {
   signed?: boolean /** (boolean) signed or not (default true) */;
   rolling?: boolean /** (boolean) Force a session identifier cookie to be set on every response. The expiration is reset to the original maxAge, resetting the expiration countdown. (default is false) */;
   renew?: boolean /** (boolean) renew session when session is nearly expired, so we can always keep user logged in. (default is false)*/;
-  secure?: boolean /** (boolean) secure cookie* (default is false)/;
+  secure?: boolean /** (boolean) secure cookie* (default is false)/; **/
   sameSite?: string /** (string) session cookie sameSite options (default undefined, don't set it) */;
+  store?: any;  /** (object) session storage is dependent on your external store */
+  externalKey?: { /** (object) external key default is cookie */
+    get: (ctx: any) => string;
+    set: (ctx: any, key: string) => void;
+  }
 }
 
 interface BpframeworkMiddleware {
